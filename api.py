@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, abort, make_response, request
 
 app = Flask(__name__)
-app.config["DEBUG"] = True
 
 courses = [
 	{
@@ -82,4 +81,5 @@ def delete_course(course_id):
 def not_found(error):
 	return make_response(jsonify({'error': 'Not found'}), 404);
 
-app.run()
+if __name__ == '__main__':
+    app.run(debug=True)
