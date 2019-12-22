@@ -32,7 +32,6 @@ def create_course():
 	if not request.json or not 'name' or not 'shortDescription':
 		abort(400)
 		
-	newPrice
 	if not request.json['price']:
 		newPrice = 0.0
 	else: 
